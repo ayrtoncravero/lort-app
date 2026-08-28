@@ -1,0 +1,94 @@
+:root {
+  --font-heading: 'Cormorant Garamond', 'Georgia', serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Menlo', monospace;
+
+  --lort-muted: #8a8f84;
+  --lort-border: #2c302a;
+  --lort-parchment: #e8dfc8;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  background: #0d0f0d;
+}
+
+body {
+  font-family: var(--font-body);
+  letter-spacing: 0.01em;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-heading {
+  font-family: var(--font-heading);
+  letter-spacing: 0.01em;
+}
+
+.font-mono,
+code,
+pre {
+  font-family: var(--font-mono) !important;
+}
+
+/* subtle parchment/map texture, used sparingly on hero-type surfaces */
+.lort-texture {
+  position: relative;
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(201, 169, 97, 0.05), transparent 45%),
+    radial-gradient(circle at 80% 60%, rgba(47, 74, 58, 0.12), transparent 50%),
+    linear-gradient(180deg, #0d0f0d 0%, #10130f 100%);
+}
+
+.lort-texture::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image:
+    linear-gradient(90deg, rgba(201, 169, 97, 0.4) 1px, transparent 1px),
+    linear-gradient(rgba(201, 169, 97, 0.4) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+.lort-divider-rule {
+  width: 44px;
+  height: 2px;
+  background: linear-gradient(90deg, #c9a961, transparent);
+}
+
+.text-muted {
+  color: var(--lort-muted) !important;
+}
+
+a {
+  color: inherit;
+}
+
+.lort-transition {
+  transition: transform 0.18s ease, border-color 0.18s ease, background-color 0.18s ease;
+}
+
+.lort-hover-lift:hover {
+  transform: translateY(-2px);
+}
+
+::selection {
+  background: rgba(201, 169, 97, 0.28);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0d0f0d;
+}
+::-webkit-scrollbar-thumb {
+  background: #2c302a;
+  border-radius: 8px;
+}

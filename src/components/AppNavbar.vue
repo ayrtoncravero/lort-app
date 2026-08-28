@@ -24,6 +24,30 @@
 
       <div class="d-none d-md-flex align-center ga-2">
         <v-btn to="/docs" variant="text" density="comfortable" class="text-body-2 text-muted">Documentation</v-btn>
+        <v-menu>
+          <template #activator="{ props: menuProps }">
+            <v-btn
+              v-bind="menuProps"
+              variant="outlined"
+              density="comfortable"
+              icon="mdi-github"
+              size="small"
+              aria-label="LORT source code on GitHub"
+            />
+          </template>
+          <v-list density="compact" min-width="220">
+            <v-list-subheader>LORT SOURCE CODE</v-list-subheader>
+            <v-list-item
+              v-for="repo in githubRepos"
+              :key="repo.url"
+              :href="repo.url"
+              target="_blank"
+              rel="noopener noreferrer"
+              :title="repo.label"
+              :subtitle="repo.description"
+            />
+          </v-list>
+        </v-menu>
       </div>
 
       <v-btn
@@ -47,6 +71,17 @@
       />
       <v-divider class="my-2" />
       <v-list-item to="/docs" title="Documentation" @click="drawer = false" />
+      <v-list-subheader>LORT SOURCE CODE</v-list-subheader>
+      <v-list-item
+        v-for="repo in githubRepos"
+        :key="repo.url"
+        :href="repo.url"
+        target="_blank"
+        rel="noopener noreferrer"
+        :title="repo.label"
+        :subtitle="repo.description"
+        @click="drawer = false"
+      />
     </v-list>
   </v-navigation-drawer>
 </template>
@@ -64,6 +99,11 @@ const navLinks = [
   { to: '/places', label: 'Places' },
   { to: '/races', label: 'Races' },
   { to: '/gods', label: 'Gods' }
+]
+
+const githubRepos = [
+  { label: 'LORT App', description: 'Frontend — Vue/Vite', url: 'https://github.com/ayrtoncravero/lort-app' },
+  { label: 'LORT API', description: 'Backend — NestJS', url: 'https://github.com/ayrtoncravero/lort-api' }
 ]
 </script>
 

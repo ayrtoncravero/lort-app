@@ -4,6 +4,13 @@ LORT is a project that provides a REST API for the world of *The Lord of the Rin
 
 This repository contains the **frontend**. The API itself is a separate project (`lort-api`).
 
+## Repositories
+
+LORT is composed of two repositories:
+
+- **LORT App** — frontend, Vue/Vite: [github.com/ayrtoncravero/lort-app](https://github.com/ayrtoncravero/lort-app)
+- **LORT API** — backend, NestJS: [github.com/ayrtoncravero/lort-api](https://github.com/ayrtoncravero/lort-api)
+
 The web app includes:
 
 - Resource browsing (list views with search, filters and pagination)
@@ -59,7 +66,7 @@ Run the LORT API separately and make sure it is available at the configured `VIT
 ## Installation
 
 ```bash
-git clone <this-repository-url>
+git clone https://github.com/ayrtoncravero/lort-app.git
 cd lort-app
 pnpm install
 ```

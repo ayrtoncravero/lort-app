@@ -28,6 +28,22 @@
               <router-link to="/explorer" class="footer-link">API Explorer</router-link>
             </div>
           </div>
+          <div>
+            <div class="text-overline text-muted mb-2">Project</div>
+            <div class="d-flex flex-column ga-1">
+              <a
+                v-for="repo in githubRepos"
+                :key="repo.url"
+                :href="repo.url"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer-link d-inline-flex align-center ga-1"
+              >
+                <v-icon icon="mdi-github" size="14" />
+                {{ repo.label }}
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -52,6 +68,11 @@ const resourceLinks = [
   { to: '/places', label: 'Places' },
   { to: '/races', label: 'Races' },
   { to: '/gods', label: 'Gods' }
+]
+
+const githubRepos = [
+  { label: 'LORT App', url: 'https://github.com/ayrtoncravero/lort-app' },
+  { label: 'LORT API', url: 'https://github.com/ayrtoncravero/lort-api' }
 ]
 </script>
 

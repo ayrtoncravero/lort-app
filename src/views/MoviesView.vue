@@ -25,7 +25,7 @@
       </v-row>
 
       <div class="d-flex justify-center mt-8">
-        <v-pagination v-model="page" :length="totalPages" density="comfortable" />
+        <v-pagination v-model="page" :length="totalPages" :total-visible="5" density="comfortable" />
       </div>
     </template>
 

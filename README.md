@@ -4,6 +4,12 @@ LORT is a project that provides a REST API for the world of *The Lord of the Rin
 
 This repository contains the **frontend**. The API itself is a separate project (`lort-api`).
 
+## Live Demo / Production
+
+- **Live Demo**: [https://lort-app.vercel.app](https://lort-app.vercel.app)
+- **API**: [https://lort-api.vercel.app/api](https://lort-api.vercel.app/api)
+- **API Documentation**: [https://lort-api.vercel.app/api/docs](https://lort-api.vercel.app/api/docs)
+
 ## Repositories
 
 LORT is composed of two repositories:
